@@ -14,7 +14,7 @@ func main() {
 	}
 
 	http.HandleFunc("/markdown", GenerateMarkdown)
-	http.Handle("/", http.FileServer(http.Dir(".")))
+	http.Handle("/", http.FileServer(http.Dir("public")))
 	http.ListenAndServe(":"+port, nil)
 }
 
